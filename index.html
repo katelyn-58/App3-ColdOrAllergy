@@ -48,6 +48,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(cold_count);
+		
+/* added alert for cold count to test results page */
+		
         }
 	function getResults(){
 		var allergyPercent = 100 * (allergy_count/(allergy_count + cold_count));
@@ -101,9 +105,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
        		 <p>Are your eyes watery or itchy?</p>  
-		<a href="#two”  onclick="allergyAdd();” class="w3-button w3-large w3-black w3-round-xxlarge">yes</go to page two></a>
-		<a href="#two"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge">no</go to page two></a>
-	</div><!-- /content -->
+		<a href="#two"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>
+		<a href="#two"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
+	</div>
 	
 </div>
 
@@ -114,11 +118,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
-		<a href="#three”  onclick="allergyAdd();” class="w3-button w3-large w3-black w3-round-xxlarge">yes</go to page three></a>
-		<a href="#three"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge">no</go to page three></a>
-	</div><!-- /content -->
-
-
+		<a href="#three"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>
+		<a href="#three"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
+	</div>
 
 	
 </div>	
@@ -130,9 +132,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
-		<a href="#four”  onclick="allergyAdd();” class="w3-button w3-large w3-black w3-round-xxlarge">yes</go to page four></a>
-		<a href="#four"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge">no</go to page four></a>
-    	</div><!-- /content -->
+		<a href="#four"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>
+		<a href="#four"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
+    	</div>
 		
 </div>	
 
@@ -143,9 +145,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five”  onclick="allergyAdd();” class="w3-button w3-large w3-black w3-round-xxlarge">yes</go to page five></a>												  
-		<a href="#five"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge">no</go to page five></a>
-    	</div><!-- /content -->
+		<a href="#five"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>											  
+		<a href="#five"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
+    	</div>
 		
 </div>	
 
@@ -157,6 +159,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p id="Results"></p>
 		<a onclick="getResults();" class="w3-button w3-large w3-black w3-round-xxlarge">CLICK FOR RESULTS</a>
+		
 	
 		
 
