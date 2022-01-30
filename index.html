@@ -56,9 +56,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function getResults(){
 		var allergyPercent = 100 * (allergy_count/(allergy_count + cold_count));
 		var coldPercent = 100 * (cold_count/(allergy_count + cold_count));
-		var resultText = document.getElementById("results");
+		document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+
 		
-/* moved probabiltiy code down to results page and added the resultText variable */
+/* moved probabiltiy code down to results page and added the innerHTML command under functions for results testing */
 
   </script>
 
@@ -120,8 +121,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
-		<a href="#three"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>
-		<a href="#three"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
+		<a href="#three"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>
+		<a href="#three"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
 	</div>
 
 	
@@ -134,10 +135,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
-		<a href="#four"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>
-		<a href="#four"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
+		<a href="#four"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>
+		<a href="#four"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
     	</div>
-		
+<!--switched onclick functions to corresponding answers-->
+	
 </div>	
 
 <div class="page" id="four">
@@ -159,10 +161,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;</p>
+		<p id="results"></p>
 		<a onclick="getResults();" class="w3-button w3-large w3-black w3-round-xxlarge">CLICK FOR RESULTS</a>
 		
-<!--replaced "results" with probability code for results page testing-->
+<!--added probability code in between <P> tags for results page testing-->
 		
 
 
