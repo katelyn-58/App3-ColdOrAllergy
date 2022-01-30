@@ -8,6 +8,9 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
 Authors in chronological order of contribution:
 Tim Riedel
 Author 2
+
+Katelyn Eusebio
+Author 1
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +20,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+
  
 Known Issues:
-blah, blah, blah, blah
+
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -42,15 +45,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
-		alert(cold_count);
-		
-/* added alert for cold count to test results page */
+
+/* deleted alerts for allergy and cold count to avoid alerts in the survey after each question */		
+
 		
         }
 	function getResults(){
@@ -59,9 +61,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
 	}
 	
-/* added ending bracket to last getResults function */	
+/* created function getResults for last page, which displays user's final results using the formula presented. added ending bracket to function getResults to fix results error and complete the function. */	
 		
-/* moved probabiltiy code down to results page and added the innerHTML command under functions for results testing */
 
   </script>
 
@@ -83,6 +84,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     background-color: hsl(28, 100%, 85%);
 }
 
+/* changed background color to light orange */
+	
   .page:target {
     left: 0vw;
     z-index: 1;
@@ -115,6 +118,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 </div>
+	<!-- added <a> commands to create links that redirects to the next page. onclick functions aids in calculating the final results. created larger buttons.-->
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
@@ -127,8 +131,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#three"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
 	</div>
 
-	
 </div>	
+	
 	
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
@@ -140,7 +144,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#four"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>
 		<a href="#four"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
     	</div>
-<!--switched onclick functions to corresponding answers-->
+	
+<!--switched onclick functions to corresponding answers for accurate results-->
 	
 </div>	
 
@@ -156,8 +161,38 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div>
 		
 </div>	
-
+	
+<!--switched button colors from light green to black-->
+	
 <div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have muscle aches?</p>
+		<a href="#six"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>											  
+		<a href="#six"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
+    	</div>
+	
+</div>	
+	<!-- created question 5-->
+	
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Did your symptoms develop gradually?</p>
+		<a href="#seven"  onclick="coldAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> yes </a>											  
+		<a href="#seven"  onclick="allergyAdd();" class="w3-button w3-large w3-black w3-round-xxlarge"> no </a>
+    	</div>
+		
+</div>	
+	<!-- created question 6-->
+
+<div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
@@ -169,15 +204,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 </div>
 	
-	<!-- added </div> tags-->
-		
-<!--added probability code in between <P> tags for results page testing-->
+	<!-- created results page and button that reveals final results. added </div> tags.-->
 		
 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
-</footer>
+	</footer>
 
 </body>
 </html>
